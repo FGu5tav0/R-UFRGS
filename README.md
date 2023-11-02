@@ -1,7 +1,7 @@
 <h1 align="center">:file_cabinet: Repositório para a disciplina de Tópicos Especiais em Ciência do Solo</h1>
 
 ## :memo: Descrição
-Aqui é disponibilizado o material apresentado e desenvolvido durante a disciplina além de materiais extras para estudo
+Neste espaço, você encontra o material apresentado e desenvolvido durante a disciplina, bem como materiais extras para estudo.
 
 ## Apresentações 
 - [Apresentação Primeira Aula](https://gugaf.quarto.pub/aula-1/#/title-slide)
