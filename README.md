@@ -3,14 +3,18 @@
 ## :memo: Descrição
 Aqui é disponibilizado o material apresentado e desenvolvido durante a disciplina além de materiais extras para estudo
 
+## Apresentações 
+[Apresentação Primeira Aula](https://gugaf.quarto.pub/aula-1/#/title-slide)
+[Data Tidy](https://gugaf.quarto.pub/dados-arrumados---data-tidy/#/title-slide)
+
 ## :books: Materiais para estudo em Português
 
-# Vídeos
+### Vídeos
 * [Fernanda Peres](https://www.youtube.com/@FernandaPeres)
 * [Mercel Santos](https://www.youtube.com/c/MercelSantos)
 * [Ben Deivide](https://www.youtube.com/watch?v=_JqtU3X101E&list=PL-20Z1XFWKR0y0qZdOM0KKqb4oEbAMs7O)
 
-# Livros
+### Livros
 * [Curso-r](https://livro.curso-r.com/index.html)
 * [Software R: curso avançado](https://smolski.github.io/livroavancado/index.html)
 * [AgroR](https://agronomiar.github.io/AgroR_Tutorial/)
@@ -21,13 +25,13 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 
 ## :books: Materiais para estudo em Espanhol
 
-# Vídeos
+### Vídeos
 * [LatinR](https://www.youtube.com/@LatinR)
 * [Enriqueloper](https://www.youtube.com/watch?v=HVB0kt5ODh0&list=PLdV8ntSOIL5SqS4-sbms4M_puIIucPwmh)
 * [TruePositive](https://www.youtube.com/watch?v=WCcHcWsMN1o)
 * [Rafa Gonzalez Gouveia](https://www.youtube.com/watch?v=k3tiNvTmug8&list=PLbDLkhJ5sFvCWFbP4tAFALHkNWNFo_FiL)
 
-# Livros
+### Livros
 * [R Para Ciencia de Dato](https://es.r4ds.hadley.nz/)
 * [Manual de R](https://fhernanb.github.io/Manual-de-R/)
 * [R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4/)
