@@ -45,7 +45,9 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 * <b>Introduction to Environmental Data Science</b>: https://bookdown.org/igisc/EnvDataSci/
 
 ## :books: Materiais sobre visualização
-* <b>Introduction to Environmental Data Science</b>: [R Graphics Cookbook](https://r-graphics.org/)
+* [R Graphics Cookbook](https://r-graphics.org/)
+* [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
+* [Modern Data Visualization with R](https://rkabacoff.github.io/datavis/)
 
 ## Comunidade R-Ladies
 * <b>Site</b>: https://rladies.org/
