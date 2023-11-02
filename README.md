@@ -4,8 +4,8 @@
 Aqui é disponibilizado o material apresentado e desenvolvido durante a disciplina além de materiais extras para estudo
 
 ## Apresentações 
-[Apresentação Primeira Aula](https://gugaf.quarto.pub/aula-1/#/title-slide)
-[Data Tidy](https://gugaf.quarto.pub/dados-arrumados---data-tidy/#/title-slide)
+- [Apresentação Primeira Aula](https://gugaf.quarto.pub/aula-1/#/title-slide)
+- [Data Tidy](https://gugaf.quarto.pub/dados-arrumados---data-tidy/#/title-slide)
 
 ## :books: Materiais para estudo em Português
 
