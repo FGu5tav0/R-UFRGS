@@ -42,7 +42,7 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 * <b>Applied Statistics with R</b>: https://book.stat420.org/
 * <b>Statistical Inference via Data Science</b>: https://moderndive.com/
 * <b>Meta-analysis of Ecological Data in R</b>: https://bookdown.org/robcrystalornelas/meta-analysis_of_ecological_data/
-* <bIntroduction to Environmental Data Science</b>: https://bookdown.org/igisc/EnvDataSci/
+* <b>Introduction to Environmental Data Science</b>: https://bookdown.org/igisc/EnvDataSci/
 
 ## Comunidade R-Ladies
 * <b>Site</b>: https://rladies.org/
