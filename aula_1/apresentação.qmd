@@ -1,0 +1,595 @@
+---
+title: "Introdução à linguagem de programação R para estudos em Ciência do solo"
+subtitle: "Programa de Pós-Graduação em Ciência do Solo - UFRGS"
+author: "Gustavo Frosi"
+institute: "Doutorando em Ciência do Solo - UFRGS"
+date: "`r Sys.Date()`"
+# width: 1280
+# height: 960
+slide-number: true
+format: 
+  revealjs:
+    chalkboard: true
+    multiplex: true
+    footer: "[https://github.com/FGu5tav0/R-UFRGS](https://github.com/FGu5tav0/R-UFRGS)"
+    theme: ["custom.scss"]
+    slide-number: c/t
+    incremental: true
+    title-slide-attributes:
+      data-background-image: figs/back.jpg
+      data-background-size: cover  
+      data-background-opacity: "0.3"
+      data-background-color: black
+lang: pt
+editor_options: 
+  chunk_output_type: console
+---
+
+## O que é o R?
+
+<br>
+
+::: fragment
+> É uma linguagem e ambiente para computação estatística e gráficos. É um software livre e de código aberto (open source).
+
+-The R Foundation [link](https://www.r-project.org/about.html)
+:::
+
+::: fragment
+> R era uma linguagem de programação que foi projetada especificamente para as necessidades de estatística e análise de dados
+
+-Hadley Wickham [link](https://www.se-radio.net/2021/03/episode-450-hadley-wickham-on-r-and-tidyverse/)
+:::
+
+## Não é um programa "comum"!
+
+::: columns
+::: {.column width="\"50%"}
+![SPSS](https://researchbasics.education.uconn.edu/wp-content/uploads/sites/1215/2015/09/Fullscreen-capture-932015-124908-PM.bmp_.jpg){fig-alt="height" fig-align="center" width="450"}
+:::
+
+::: {.column width="\"50%"}
+![R](https://i.stack.imgur.com/HbD4B.png){fig-alt="height" fig-align="center" width="450"}
+:::
+:::
+
+## A linguagem de programação R
+
+[R]{style="color: #1b5fae;"} é uma linguagem de alto nível (mais próxima).
+
+::: {.r-stack}
+
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*8j2PmhExz4q87OoddaH7ag.png){fig-align="center" width="450"}
+
+![](figs/R_logo.png){.absolute bottom="420" left="300" width="60" height="50"}
+:::
+
+[Tipos de linguagens](https://thebittheories.com/levels-of-programming-languages-b6a38a68c0f2)
+
+## Origem da linguagem R
+
+<br>
+
+::: columns
+::: {.column width="\"50%"}
+::: fragment
+O [R]{style="color: #1b5fae;"} foi desenvolvido pelos estatísticos **Robert Gentleman** e **Ross Ihaka** na Universidade de Auckland na Nova Zelândia no início da década de 1990.
+
+Inspirada na linguagem **S**
+
+A, B, C, D... [R]{style="color: #1b5fae;"},**S**
+:::
+:::
+
+::: {.column width="\"50%"}
+::: fragment
+![Robert Gentleman e Ross Ihaka](figs/Criadores.jpg){fig-alt="height" fig-align="center" width="450"}
+:::
+:::
+:::
+
+## Origem da linguagem R
+
+<br>
+
+::: columns
+::: {.column width="\"50%"}
+![Ihaka 1996](figs/artigo_r.png){fig-align="center"} [Ihaka 1996](https://www.jstor.org/stable/1390807?seq=1&cid=pdf-reference#references_tab_contents)
+:::
+
+::: {.column width="\"50%"}
+![CD primeira versão](figs/r_cd.jpg){fig-align="center" width="468"}
+:::
+:::
+
+## Linha do tempo
+
+![](https://www.mdpi.com/life/life-12-00648/article_deploy/html/images/life-12-00648-g001.png){fig-align="center"}
+
+[Giorgi et al. 2022](https://www.mdpi.com/2075-1729/12/5/648)
+
+## Popularidade do R
+
+::: columns
+::: {.column width="50%"}
+![Rank 2023](https://www.stackscale.com/wp-content/uploads/2022/09/popular-programming-languages-ranking-2023.jpg){fig-align="left"} [Rank 2023](https://www.stackscale.com/blog/most-popular-programming-languages/)
+:::
+
+::: {.column width="50%"}
+![Rank TIOBE](figs/popularidade_r.png){fig-align="right" width="610" height="341"} [Rank TIOBE](https://www.tiobe.com)
+:::
+:::
+
+## Usar ou não usar R?
+
+::: columns
+::: {.column width="\"50%"}
+<center>
+
+::: fragment
+Vantagens 👍
+:::
+
+-   Open-source; <!-- -   SigmaPlot: R\$ 3471; --> <!-- -   Office 365: R\$ 359 (ano); --> <!-- -   SAS: --> <!-- -   SPSS: R\$ 17931 -->
+-   Feito para análise estatística;
+-   Muitas possibilidades de análises;
+-   Rapidez e flexibilidade;
+-   Comunidade ativa;
+-   [Popular no meio acadêmico]{.fragment .highlight-red};
+
+</center>
+:::
+
+::: {.column width="\"50%"}
+<center>
+
+::: fragment
+Desvantagens 👎
+:::
+
+</center>
+
+-   Interface pouco "amigável";
+
+-   Requer maior conhecimento;
+
+-   Consumo de memória do equipamento;
+:::
+:::
+
+## Usar ou não usar R?
+
+![www.kolabtree.com](https://www.kolabtree.com/blog/wp-content/uploads/2020/07/Statistical-Tools-1-1024x626@2x.jpg){fig-align="center" width="650"}
+
+## Igualdade!
+
+O [R]{style="color: #1b5fae;"}, entre outras linguagens open-source, é responsável por permitir que países em desenvolvimento tenham à disposição ferramentas sofisticadas para a realização de análises.
+
+## Igualdade (2017 vs 2019)
+
+::: columns
+::: {.column width="\"50%"}
+![link](https://cdn.stackoverflow.co/images/jo7n4k8s/production/8462974f9587dd53da226c0d98d6dbf13c68b8f1-1024x1024.png){fig-align="center"} [link](https://stackoverflow.blog/2017/08/29/tale-two-industries-programming-languages-differ-wealthy-developing-countries/)
+:::
+
+::: {.column width="\"50%"}
+<br>
+
+![link](figs/use_r.png){fig-align="center"}[link](https://www.kaggle.com/code/laiyipeng/data-science-in-developing-countries)
+:::
+:::
+
+# Aplicações do R
+
+## Geral
+
+<br> <br>
+
+> This is R. There is no if. Only how.
+
+> Esse é o R. Não há se. Apenas como.
+
+-Simon Blomberg
+
+## Geral
+
+::: columns
+::: {.column width="\"50%"}
+📒 Pesquisas acadêmicas:
+
+💵 Finanças:
+
+💻 Comércio eletrônico:
+
+📲 Mídias sociais:
+
+🏦 Bancos:
+
+🩺 Assistência médica:
+
+⚒️ Indústria:
+
+🏛 Governo:
+
+📟 Setor de TI:
+:::
+
+::: {.column width="\"50%"}
+✅Análise estatística;
+
+✅Análise de risco;
+
+✅Recomendação de produtos;
+
+✅Análise de interação de pessoas;
+
+✅Risco de crédito/Hipoteca;
+
+✅Análise de medicamentos;
+
+✅Estratégia de negócio (demanda);
+
+✅Análise de saúde pública;
+
+✅Criação de produtos;
+:::
+:::
+
+[link](https://www.javaassignmenthelp.com/blog/applications-of-r/#content)
+
+## Aplicações em Ciência do Solo
+
+::: columns
+::: {.column width="\"50%"}
+- Organização de dados;
+  - Limpeza;
+  - Tratamento;
+  - Modificação.
+- Visualização de dados;
+  - Gráficos;
+  - Tabelas; 
+  - Fluxogramas;
+- Estatística básica;
+  - Estatística descritiva;
+  
+:::
+
+::: {.column width="\"50%"}
+- Estatística inferencial;
+  - Testes de hipóteses;
+  - Regressões;
+  - Modelos mistos;
+  - SEM;
+- Aprendizado de máquina;
+- Reprodução;
+  - Relatório;
+  - Apresentação;
+  - Website;
+  - Livro;
+  - Doc. Interativo.
+
+:::
+:::
+
+## Gênese e classificação do solo
+
+Dicionário das classes de solo {SoilTaxonomy}
+
+::: columns
+::: {.column width="\"50%"}
+```{r}
+# gênese e classificação do solo ------------------------------------------
+
+library(SoilTaxonomy)
+library(dplyr)
+library(gt)
+
+data("ST")
+
+ST |> filter(order == "oxisols") |> select(1:4) |> head(n = 10) |> gt() |> 
+  tab_header(title = md( "**Soil Taxonomy**")) |> 
+  tab_source_note(
+    source_note = md("Dados do pacote {SoilTaxonomy}")
+  )
+```
+:::
+
+::: {.column width="\"50%"}
+```{r}
+taxonTree("oxisols")
+```
+:::
+:::
+
+## Gênese e classificação do solo
+
+Textura {soiltextur}
+
+```{r}
+library(soiltexture)
+my.text <- data.frame(
+"CLAY" = c(05,60,15,05,25,05,25,45,65,75,13,47),
+"SILT" = c(05,08,15,25,55,85,65,45,15,15,17,43),
+"SAND" = c(90,32,70,70,20,10,10,10,20,10,70,10),
+"OC" = c(20,14,15,05,12,15,07,21,25,30,05,28)
+)
+TT.plot(class.sys = "SiBCS13.TT",
+        tri.data = my.text, col = "red",
+        cex.axis = .5,
+        cex.lab = .5,
+        cex.main = .8,
+        lwd.axis = .4,
+        lwd.lab = .5
+)
+```
+
+## Gênese e classificação do solo
+
+Perfil {soilDB} {aqp}
+
+```{r}
+library(soilDB)
+library(aqp)
+
+data(sp4) # Conjunto de dados sp4 do pacote AQP (data.frame)
+aqp::depths(sp4) <- id ~ top + bottom
+
+par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp4, name='name', color='clay',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif", col.label='Argila', )
+
+```
+
+## Mineralogia do solo
+
+::: columns
+::: {.column width="\"40%"}
+Identificação mineral {powdR}
+
+```{r}
+library(powdR)
+#> powdR: Full Pattern Summation of X-Ray Powder Diffraction Data
+
+#Load some soils to quantify
+data(soils)
+
+#Load a powdRlib reference library of pure patterns
+data(minerals)
+
+#Quantify a sample
+q <-  fps(lib = minerals,
+          smpl = soils$sandstone,
+          refs = minerals$phases$phase_id,
+          std = "QUA.1")
+
+q$phases_grouped
+
+```
+:::
+
+::: {.column width="\"60%"}
+```{r, fig.height=10, fig.width=10}
+#Inspect the quantification
+plot(q, wavelength = "Cu")
+```
+:::
+:::
+
+## Química do solo
+
+modelos {stats}
+
+```{r, fig.align='center'}
+library(dplyr)
+library(ggplot2)
+
+dados <- data.frame(q = c(6.87,10.64,18.05,25.39,34.14,37.34),
+                    c = c(1.87,3.06,9.19,28.11,77.68,155.1))
+
+modelo <-nls(q ~ (k*admax*c)/(1+k*c), 
+             start= c(k=0.033, admax=9.52), dados)
+# summary(modelo)
+modelo |> broom::tidy() |> gt() |> 
+  tab_header(title = md("**Estatística para o modelo de Langmuir**")) 
+  
+
+
+ggplot(dados, aes(x = c, y = q)) +
+  geom_point(size = 2) +
+  scale_y_continuous( n.breaks = 10, limits = c(0,40)) +
+  labs(x = expression("C, mmol m"^3), y = "q, mmol kg") +
+  theme_minimal(24) +
+  geom_smooth(formula = y~(K*CMAP*x)/(1+K*x),
+              method="nls", se=F, col = "tomato",
+              method.args = list(start= c(K = 0.033,
+                                          CMAP = 9.25)))
+
+```
+
+## Química do solo
+
+Carbono orgânico e nutrientes disponíveis {SoilTesting}
+
+```{r, echo=TRUE}
+#| code-line-numbers: "|4|5|6|7|8"
+
+library(SoilTesting)
+
+with(data = df_Available_K[1:5, ], Available_K(
+  W = Mass_Soil,
+  VE = Vol_Extractant,
+  VA = Vol_Aliquot,
+  VF = Vol_Final,
+  FR = Flame_Reading
+))
+```
+
+## Física do solo
+
+Intervalo hídrico ótimo {soilphysics}
+
+```{r, echo=FALSE, eval=TRUE}
+
+library(soilphysics)
+data(skp1994)
+LHO <- llwr(theta = skp1994$W, h = skp1994$h, Bd = skp1994$BD, Pr = skp1994$PR,
+     particle.density = 2.65, air = 0.1,
+     critical.PR = 2, h.FC = 100, h.WP = 15000, graph = T, graph2 = F)
+
+```
+
+## Fertilidade do solo
+
+Correlação e calibração {soiltestcorr}
+
+```{r}
+library(soiltestcorr)
+ # Example dataset
+ dat <- data.frame("ry" = c(65,80,85,88,90,94,93,96,97,95,98,100,99,99,100),
+                   "stv" = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15))
+ # Run
+ fit_example_lp <- linear_plateau(data = dat, 
+ ry = ry, stv = stv, resid = F, plot = T)
+
+ fit_example_lp
+# }
+
+```
+
+## Microbiologia do solo
+
+Curva de crescimento microbiano {growthcurver}
+
+<!-- na verdade usa esse pacote, mas não foi desenvolvido para micro. O de micro não foi possível de colocar  -->
+
+```{r}
+
+library(growthcurver)                    # load the package
+d <- growthdata                          # load some sample, simulated data
+gc_fit <- SummarizeGrowth(d$time, d$A1)  # do the analysis
+plot(gc_fit)                             # plot your data and the best fit
+gc_fit
+```
+
+## Carbono e MOS
+
+Modelos de decomposição da MOS {SoilR}
+
+```{r}
+#| fig-cap: "Uso do modelo Century"
+library(SoilR)
+
+mnths=seq(0,100)
+APPT=50 # Assume 50 cm annual precipitation
+Pmax=-40+7.7*APPT # Max aboveground production
+Rmax=100+7.0*APPT # Max belowground production
+abvgIn=Pmax/(Pmax+Rmax)
+blgIn=Rmax/(Pmax+Rmax)
+
+cm=CenturyModel(t=mnths, surfaceIn = abvgIn, soilIn = blgIn, LN=0.5, Ls=0.1)
+Ct=getC(cm)
+
+poolNames=c("Surface structural", "Surface metabolic", "Belowground structural",
+               "Belowground metabolic", "Active SOM", "Slow SOM", "Passive SOM")
+matplot(mnths,Ct, type="l", lty=1, col=1:7, xlab="Time (months)", ylab="Carbon stock ")
+legend("topleft", poolNames, lty=1, col=1:7, bty="n")
+
+```
+
+## Geoprocessamento
+
+::: columns
+::: {.column width="\"50%"}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+#| fig-height: 10
+
+library(geobr)
+library(sf)
+library(ggspatial)
+library(ggforce)
+library(soilpalettes)
+
+solos <- st_read("brasil_solos_5m_20201104/brasil_solos_5m_20201104.shp")
+brazil <- read_state()
+
+ggplot() +
+  geom_sf(data = brazil) +
+  geom_sf(data = solos, aes(fill = CLASSE_DOM), linewidth = .5) +
+  scale_fill_manual(values = soil_palette("redox2",73)) +
+  annotation_north_arrow(
+    location = "bl",
+    style = north_arrow_nautical()
+  ) +
+  coord_sf() +
+  annotation_scale(location = "br") +
+  labs(
+    x = NULL, y = NULL,
+    title = "Mapa de solos do Brasil",
+    caption = "Fonte: Embrapa"
+  ) +
+  theme_bw(28) +
+  theme(
+    legend.position = "none",
+    axis.text.y = element_blank()
+  )
+```
+:::
+::: {.column width="\"50%"}
+
+![](figs/perda_solo_area_3_curva_dif.png)
+
+:::
+:::
+
+# Lógica de programação
+
+## Lógica de programação
+
+-   A solução de um determinado problema requer uma sequência de passo lógicos. A isso chamamos de algoritmo.
+
+-   O algoritmo é um conjunto de regras e passos definidos de forma clara e precisa, para que o problema seja resolvido.
+
+-   Antes de qualquer escrita de códigos deve ser realizado um algoritmo. A linguagem de programação será o meio onde nosso algoritmo será colocado em prática.
+
+## Lógica de programação
+
+```{mermaid}
+%%| fig-align: center
+%%| fig-width: 8
+%%| fig-height: 6
+%%| fig-dpi: 600
+
+flowchart TB
+        A[Entrada]
+        A-->B[/Nota 1/]
+        B-->C[/Nota 2/]
+        C-->D[Média das notas]
+        D-->E{Média >= 7}
+        E-->|Sim| F[Aprovado]
+        E-->|Não| G[Reprovado]
+        
+        
+```
+
+# Fechamento aula 1
+
+## Materiais extra
+
+R for Data Science 2e - [Hadley Wickham](https://r4ds.hadley.nz/)
+
+Ciência de Dados em R - 
+[Curso-R](https://livro.curso-r.com/index.html)
+
+Wiki R - [UFRGS](https://www.ufrgs.br/wiki-r/index.php?title=Bem-vindo_%C3%A0_Wiki_R)
+
+Software R para avaliação de dados experimentais - [Tiago Olivoto](https://tiagoolivoto.github.io/e-bookr/index.html)
+
+Manual de Planejamento e Análise de Experimentos com R [Walmes Marques Zeviani](http://leg.ufpr.br/~walmes/mpaer/)
+
+## Instalação dos softwares
+
+R - [link](https://cran.r-project.org/index.html)
+
+RStudio - [link](https://posit.co/download/rstudio-desktop/)
+
+Rtools - [link](https://cran.r-project.org/bin/windows/Rtools/)

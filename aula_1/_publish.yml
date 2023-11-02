@@ -1,0 +1,4 @@
+- source: apresentação.qmd
+  quarto-pub:
+    - id: d7a10ef5-ecf1-4e70-9d27-657188c03f99
+      url: 'https://gugaf.quarto.pub/aula-1'
