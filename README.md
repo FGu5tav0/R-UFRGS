@@ -12,6 +12,7 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 * <b>R Para Ciencia de Datos</b>:https://es.r4ds.hadley.nz/
 * <b>Enriqueloper</b>: https://www.youtube.com/watch?v=HVB0kt5ODh0&list=PLdV8ntSOIL5SqS4-sbms4M_puIIucPwmh
 * <b>TruePositive</b>: https://www.youtube.com/watch?v=WCcHcWsMN1o
+* <b>Rafa Gonzalez Gouveia</b>: https://www.youtube.com/watch?v=k3tiNvTmug8&list=PLbDLkhJ5sFvCWFbP4tAFALHkNWNFo_FiL
 
 ## Comunidade R-Ladies
 * <b>Site</b>: https://rladies.org/
