@@ -44,6 +44,9 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 * <b>Meta-analysis of Ecological Data in R</b>: https://bookdown.org/robcrystalornelas/meta-analysis_of_ecological_data/
 * <b>Introduction to Environmental Data Science</b>: https://bookdown.org/igisc/EnvDataSci/
 
+## :books: Materiais sobre visualização
+* <b>Introduction to Environmental Data Science</b>: [R Graphics Cookbook]https://r-graphics.org/
+
 ## Comunidade R-Ladies
 * <b>Site</b>: https://rladies.org/
 * <b>Youtube</b>: https://www.youtube.com/@RLadiesGlobal
