@@ -17,7 +17,7 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 * [Análises Ecológicas no R](https://analises-ecologicas.com/)
 * [Manual de Planejamento e Análise de Experimentos com R](http://leg.ufpr.br/~walmes/mpaer/index.html)
 * [Introdução à Estatística com R](https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/32-EBR_Unifal.pdf)
-* [Introdução à Linguagem RR](https://pedropark99.github.io/Introducao_R/index.html)
+* [Introdução à Linguagem R](https://pedropark99.github.io/Introducao_R/index.html)
 
 ## :books: Materiais para estudo em Espanhol
 
