@@ -1,7 +1,7 @@
 <h1 align="center">:file_cabinet: Repositório para a disciplina de Tópicos Especiais em Ciência do Solo</h1>
 
 ## :memo: Descrição
-Aqui é disponibilizado o material apresentado e desenvolvido durante a disciplina além de materiais extra
+Aqui é disponibilizado o material apresentado e desenvolvido durante a disciplina e materiais extras para estudo
 
 ## :books: Materiais para estudo em Português
 * <b>Fernanda Peres</b>: https://www.youtube.com/@FernandaPeres
