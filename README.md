@@ -19,6 +19,3 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 * <b>Youtube</b>: https://www.youtube.com/@RLadiesGlobal
 
 
-## Sites importantes
-* <b>The R Project</b>: https://www.r-project.org/
-* <b>The R Project</b>: https://www.r-project.org/
