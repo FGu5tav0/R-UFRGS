@@ -22,9 +22,10 @@ Aqui é disponibilizado o material apresentado e desenvolvido durante a discipli
 ## :books: Materiais para estudo em Espanhol
 
 # Vídeos
-* <b>Enriqueloper</b>: https://www.youtube.com/watch?v=HVB0kt5ODh0&list=PLdV8ntSOIL5SqS4-sbms4M_puIIucPwmh
-* <b>TruePositive</b>: https://www.youtube.com/watch?v=WCcHcWsMN1o
-* <b>Rafa Gonzalez Gouveia</b>: https://www.youtube.com/watch?v=k3tiNvTmug8&list=PLbDLkhJ5sFvCWFbP4tAFALHkNWNFo_FiL
+* [LatinR](https://www.youtube.com/@LatinR)
+* [Enriqueloper](https://www.youtube.com/watch?v=HVB0kt5ODh0&list=PLdV8ntSOIL5SqS4-sbms4M_puIIucPwmh)
+* [TruePositive](https://www.youtube.com/watch?v=WCcHcWsMN1o)
+* [Rafa Gonzalez Gouveia](https://www.youtube.com/watch?v=k3tiNvTmug8&list=PLbDLkhJ5sFvCWFbP4tAFALHkNWNFo_FiL)
 
 # Livros
 * <b>R Para Ciencia de Datos</b>: https://es.r4ds.hadley.nz/
