@@ -216,7 +216,7 @@ for (i in 1:length(teor_k)) {
 
 # com a família apply -----------------------------------------------------
 
-# funções distinadas a operações com loop
+# funções destinadas a operações com loop
 # pacote nativo do R
 
 # apply(array, margin, ...)
