@@ -7,6 +7,11 @@
 # Sumarizar variáveis
 # Exportar os dados
 
+###################### Importante #################
+# Sempre realize a consulta na documentação do pacote
+# Isso é impotante para entender quais as possibilidade
+# de cada função
+
 
 # Importar arquivos para o R ----------------------------------------------
 
@@ -19,7 +24,6 @@ direto <- file.choose()
 
 # Com pacote base ---------------------------------------------------------
 # dados .txt
-# dados do absorção atômica são do tipo txt
 # geralmente são mais leves que outros arquivos
 # arquivo de log
 
@@ -35,7 +39,6 @@ dados <- read.table(file = "Aula_4/dados/dados.txt", header = T)
 head(dados)
 
 # alterando tipo e nome de linhas e colunas
-
 
 dados <- read.table(file = "Aula_4/dados/dados.txt",
                     header = TRUE,
@@ -88,15 +91,18 @@ read_excel("aula_4/dados/argila_floculada.xlsx",
            skip = 1)
 
 # com link ----------------------------------------------------------------
+# Neste exemplo eu mostro o potencial do R para baixar dados da internet
 # dados do site:
 # https://www.ibge.gov.br/estatisticas/downloads-estatisticas.html
 
+# primeiro eu faço um objeto com o link dos dados
 link <- "https://ftp.ibge.gov.br/Censo_Agropecuario/Censo_Agropecuario_2017/Caracteristicas_Gerais/xlsx/05_indicadores_xlsx.zip"
-
+# a função download.file realiza o download do arquivo pelo link
 download.file(link, destfile = "aula_4/arquivo_net.zip")
-
+# depois de baixado a função unzip descompacta o arquivo
+# não é necessário caso os dados não estejam compactados
 unzip("aula_4/arquivo_net.zip", exdir = "aula_4/nova_pasta/")
-
+# por fim é só realizar a leitura dos dados
 dados <- readxl::read_excel("aula_4/nova_pasta/Indicador 01.xlsx",
                             skip = 1)
 
@@ -142,16 +148,19 @@ pivot_wider(data = dados,
 
 # separando colunas -------------------------------------------------------
 
-dados <- read_excel("aula_4/dados/argila_floculada.xlsx", sheet = "separar colunas")
+dados <- read_excel("aula_4/dados/argila_floculada.xlsx", 
+                    sheet = "separar colunas")
 
 separate(data = dados, 
          col = dose, 
          into =  c("dose","argila"))
+
 # indica o separador
 separate(data = dados, 
          col = dose, 
          into =  c("dose","argila"), 
          sep = " ")
+
 # permite a alteração da classe das colunas
 df <- separate(data = dados, 
                col = dose, 
@@ -317,16 +326,19 @@ df |> group_by(dose) |>
 # exemplo real ------------------------------------------------------------
 
 # vários pivotes ----------------------------------------------------------
+# Esse exemplo mostra o uso das funções de pivotagem para realizar em
+# várias colunas de uma única maneira. 
 
 library(tidyverse)
-# falar dos conflitos entre as funções de mesmo nome
 
 dados <- readxl::read_excel("aula_4/dados/ts_129.xlsx") |>
   janitor::clean_names()
 
-# solução de ocnflitos entre funções de mesmo nome
+# solução de conflitos entre funções de mesmo nome
+# com a função conflict_prefer do pacote {conflicted} eu defino
+# qual das função de igual nome o R deve usar como padrão
+# no exemplo eu defino que o "filter" deve ser do pacote {dplyr}
 conflicted::conflict_prefer("filter", "dplyr")
-filter(df, dose == 0)
 
 
 nomes_novos <- c(
@@ -350,34 +362,6 @@ df <- dados |>
 df |> head()
 
 
-
-# filtrando dados ---------------------------------------------------------
-
-rm(list = ls())
-
-library(tidyverse)
-
-dados <- readxl::read_excel("F:/Área de trabalho/dados_Cariopsi_aquosa.xlsx",
-                            sheet = 2) |>
-  janitor::clean_names()
-
-
-algas <- dados |>
-  filter(tratamentos %in% c(1,2,3,8,9,21,22,23,24,26,27))
-
-fosfitos <- dados |>
-  filter(tratamentos %in% c(1,2,3,13,14,15,16,17,18,19,20))
-
-quimica <- dados |>
-  filter(tratamentos %in% c(1,2,3,4,5,6,7,10,11,12,25))
-
-
-writexl::write_xlsx(x = list(algas = algas, 
-                             fosfitos = fosfitos, 
-                             quimica = quimica), 
-                    path = "F:/Área de trabalho/dados_Cariopsi_aquosa.xlsx")
-
-
 # exportando dados --------------------------------------------------------
 
 # em csv
@@ -389,6 +373,14 @@ write_xlsx(x = banco_dados, path = "caminho")
 
 # salvando os dados de df
 writexl::write_xlsx(x = df, path = "aula_4/dados_pronto.xlsx")
+
+# salvando excel com várias guias
+# no argumento "x" eu passo uma lista que contém o nome da guia
+# e o arquivo. No exemplo eu uso o df para as duas guias
+
+writexl::write_xlsx(x = list(primeira_guia = df,
+                             segunda_guia = df), 
+                    path = "aula_4/dados_pronto.xlsx")
 
 # mutate_at() -------------------------------------------------------------
 library(tidyverse)
@@ -418,7 +410,7 @@ dados |> count(grupo, grupo_dois)
 
 
 # juntar e separar bases de dados -----------------------------------------
-
+# buscar a documentação do pacote para detalhes das funções
 # nativo
 merge()
 cbind()
@@ -441,13 +433,18 @@ bind_rows()
 rm(list = ls())
 
 # dados 1
+library(dplyr)
 
 d1 <- readxl::read_excel(path = "aula_4/join/t_1.xlsx")
-
 d2 <- readxl::read_excel(path = "aula_4/join/t_2.xlsx")
+d3 <- readxl::read_excel(path = "aula_4/join/t_3.xlsx")
+d4 <- readxl::read_excel(path = "aula_4/join/t_3.xlsx")
 
-
-dados_ok <- full_join(d1, d2)
+# full joins em cadeia
+dados_ok <- d1 |> 
+  full_join(d2) |> 
+  full_join(d3) |> 
+  full_join(d4)
 
 # map ---------------------------------------------------------------------
 # pacote purrr para programação funcional
