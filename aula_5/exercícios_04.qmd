@@ -1,0 +1,35 @@
+---
+title: "Tópicos Especiais em Ciência do Solo: Introdução à linguagem de programação R para estudos em Ciência do Solo"
+subtitle: "Exercícios  de fixação 04"
+affiliation: "Programa de Pós-Graduação em Ciência do Solo - UFRGS"
+author: "Gustavo Pesini"
+
+date: today
+format: pdf
+editor_options: 
+  chunk_output_type: console
+---
+
+obs: a resolução deve ser enviada no email: [pesinig37@gmail.com](pesinig37@gmail.com) até o final do dia 20/11/2023. Deve ser montado um script em R com a identificação do número da questão seguido do código que realiza a solução do problema.
+
+
+
+# 1) Elabore um gráfico de violino apresentando todos os pontos. Utilize os dados ` agridat::bachmaier.nitrogen ` . Utilize zone (zona de fertilidade) como variável independente e yield (rendimento) como variável dependente. 
+
+# 2) Altere os elementos estéticos do gráfico elaborado no exercício 1. (Ex: cor, tema, nome dos eixos…)
+(sinta-se livre para explorar as configurações gráficas do ggplo2 e suas extensões). 
+
+# 3) Elabore um gráfico de colunas horizontal.  Utilize os dados ` carData::Soils `. A variável independente deve ser Depth (profundidade de solo) e a variável dependente pode ser qualquer variável resposta presente no conjunto de dados. Além disso, apresente o gráfico com grupamento pela variável Contour. 
+
+# 4) Altere os elementos estéticos do gráfico elaborado no exercício 3. Adicione a variável independente na ordem lógica (0-10 em cima, 10-30, 30-60, 60-90). O eixo da variável dependente deve ir até a unidade 600.
+(sinta-se livre para explorar as configurações gráficas do ggplo2 e suas extensões). 
+
+# 5) Elabore um gráfico de pontos utilizando os dados ` agridat::gomez.multilocsplitplot `. Utilize nitro (dose de N) como variável independente e yield (rendimento) como variável dependente. Divida os gráficos em facetas para cada loc (localização) e gen (genótipo). 
+
+# 6) Altere os elementos estéticos do gráfico elaborado no exercício 5. (Ex: cor, tema, nome dos eixos…)
+(sinta-se livre para explorar as configurações gráficas do ggplo2 e suas extensões). 
+
+# 7) Elabore um gráfico de sua preferência com um conjunto de dados que você possui (dados do TCC, mestrado, doutorado). Caso não possuir um conjunto de dados, utilize algum apresentado nas aulas até o presente momento, exceto aqueles citados nas questões anteriores. 
+(sinta-se livre para explorar as configurações gráficas do ggplo2 e suas extensões).
+
+
