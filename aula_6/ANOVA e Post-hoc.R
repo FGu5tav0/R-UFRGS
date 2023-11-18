@@ -219,6 +219,9 @@ ggplot(m_f, aes(dose, emmean, color = supp))+
 # Anova para delineamento de blocos casualizados --------------------------
 dados <- read_excel("/Users/gustavopesini/rcbd.xlsx")
 
+# Dados simuldos. Fonte: agRonomy - Ag Data Analytics in R
+# https://agronomy.netlify.app/teaching/
+
 #observação dos dados
 str(dados)
 
