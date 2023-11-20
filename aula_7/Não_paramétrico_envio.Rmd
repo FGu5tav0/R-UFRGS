@@ -1,0 +1,107 @@
+---
+title: "Teste Não Paramétrico"
+author: "Gustavo Frosi"
+date: "20/11/2023"
+output: html_notebook
+---
+
+# Introdução
+
+## O que é um teste não paramétrico?
+
+
+
+## Os testes não paramétricos devem ser **abandonados!** 
+
+Motivos:
+
+1 – Os testes não paramétricos são baseados em Ranks e não em medidas reais, ou seja, distorcem a natureza da variável.
+
+2 – São testes com pouco poder explicativo. São mais limitados aos testes paramétricos. Identificam a diferença, mas não o grau de diferença (tamanho de efeito).
+
+3 - Não se pode calcular o intervalo de confiança.
+
+## Usos:
+
+1 – Quando não se conhece a distribuição da variável dependente.
+
+2 – Quando a minha variável é uma categórica ordinal (níveis em ordem).
+
+3 – Quanto o número de amostras é menor que o cálculo de amostra.
+
+### Perguntas
+
+Qual o número de amostras ideal?
+
+Que tipo de cálculo eu devo fazer para chegar ao número de amostra?
+
+**Tudo isso tem ligação (ou deveria ter) com a minha pergunta de pesquisa. Por isso a pergunta de pesquisa é a etapa mais importante.**
+
+
+# Tipos de testes
+
+```{r}
+testes <- data.frame(Parametrico = c("Teste T ind.", "Teste T pareado", "Anova ind.", "Anova pareada"), 
+                     N.Parametrico = c("Mann-Whitney", "Wilcoxon", "Kuskal-Wallis", "Friedman"), 
+                     Tipo = c("Independente","Pareado","Independente", "Pareado"),
+                     Grupo = c("2","2","+2","+2"))
+
+knitr::kable(testes, format = "pandoc")
+```
+
+![](https://marcoarmello.files.wordpress.com/2012/05/teste-estatistico-marco-mello.001.png)
+
+# Exemplo 
+
+## Mann-Whitney
+
+Exemplo 1: 
+A adubação com K altera o teor do nutriente no solo?
+Para isso um solo foi submetido a um experimento com duas doses de K com 4 repetições. 
+
+```{r}
+# dados grupo 1
+
+# dados grupo 2
+
+# 
+grupo_1;grupo_2
+```
+
+**Os grupos são estatisticamente diferentes?**
+
+Vamos para a conta...
+
+
+
+
+# Dentro do R
+
+## Não pareado (Mann-Whitney)
+
+```{r}
+
+```
+
+### Pareado (Wilcoxon)
+```{r}
+
+```
+
+## Kruskal-Wallis
+```{r}
+
+
+```
+
+## Friedman
+
+```{r}
+
+
+```
+
+
+
+
+
