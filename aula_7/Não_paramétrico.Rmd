@@ -1,0 +1,130 @@
+---
+title: "Teste Não Paramétrico"
+output: html_notebook
+---
+
+# Introdução
+
+## O que é um teste não paramétrico?
+
+- Para um estatístico é um teste utilizado quando não se conhece a distribuição da variável dependente.
+
+- Para um não estatístico é um teste utilizado quando a distribuição não é normal
+
+
+## Os testes não paramétricos devem ser **abandonados!** 
+
+Motivos:
+
+1 – Os testes não paramétricos são baseados em Ranks e não em medidas reais, ou seja, distorcem a natureza da variável.
+
+2 – São testes com pouco poder explicativo. São mais limitados aos testes paramétricos. Identificam a diferença, mas não o grau de diferença (tamanho de efeito).
+
+3 - Não se pode calcular o intervalo de confiança.
+
+## Usos:
+
+1 – Quando não se conhece a distribuição da variável dependente.
+
+2 – Quando a minha variável é uma categórica ordinal (níveis em ordem).
+
+3 – Quanto o número de amostras é menor que o cálculo de amostra.
+
+### Perguntas
+
+Qual o número de amostras ideal?
+
+Que tipo de cálculo eu devo fazer para chegar ao número de amostra?
+
+**Tudo isso tem ligação (ou deveria ter) com a minha pergunta de pesquisa. Por isso a pergunta de pesquisa é a etapa mais importante.**
+
+
+# Tipos de testes
+
+```{r}
+testes <- data.frame(Parametrico = c("Teste T ind.", "Teste T pareado", "Anova ind.", "Anova pareada"), 
+                     N.Parametrico = c("Mann-Whitney", "Wilcoxon", "Kuskal-Wallis", "Friedman"), 
+                     Tipo = c("Independente","Pareado","Independente", "Pareado"),
+                     Grupo = c("2","2","+2","+2"))
+
+knitr::kable(testes, format = "pandoc")
+```
+
+![](https://marcoarmello.files.wordpress.com/2012/05/teste-estatistico-marco-mello.001.png)
+
+# Exemplo 
+
+## Mann-Whitney
+
+Exemplo 1: 
+A adubação com K altera o teor do nutriente no solo?
+Para isso um solo foi submetido a um experimento com duas doses de K com 4 repetições. 
+
+```{r}
+# dados grupo 1
+grupo_1 <- c(35,72,54,54)
+# dados grupo 2
+grupo_2 <- c(56,45,73,54)
+# 
+grupo_1;grupo_2
+```
+
+**Os grupos são estatisticamente diferentes?**
+
+Vamos para a conta...
+
+Fórmula de Mann-Whitney:
+
+$$ U_{1} = n_{1}*n_{2}+\frac{n_{1}*(n_{1}+1)}{2}-R_{1} $$
+$$ U_{2} = n_{1}*n_{2}+\frac{n_{2}*(n_{2}+1)}{2}-R_{2} $$
+
+# Dentro do R
+
+## Não pareado (Mann-Whitney)
+
+```{r}
+wilcox.test(grupo_1, grupo_2)
+```
+
+### Pareado (Wilcoxon)
+
+```{r}
+wilcox.test(grupo_1, grupo_2, paired = T)
+
+data.frame(grupo_1,grupo_2) |> 
+  tidyr::pivot_longer(cols = 1:2, values_to = 'valor', names_to = "var") |> 
+  rstatix::wilcox_test(valor ~ var)
+```
+
+## Kruskal-Wallis
+
+```{r}
+df <- agridat::lehner.soybeanmold
+
+kruskal.test(yield ~ trt, data = df)
+
+df |> 
+  rstatix::kruskal_test(yield ~ trt)
+
+```
+
+## Friedman
+
+```{r}
+df <- ToothGrowth  |> 
+    filter(supp == "VC")  |> 
+    mutate(bloco = rep(1:10, 3))
+
+friedman.test(len ~ dose | bloco, data = df)
+
+df |> dplyr::group_by(dose,bloco) |> dplyr::count()
+
+df  |>  friedman_test(len ~ dose | bloco)
+
+```
+
+# Não Paramétrico ou transformar a variável?
+
+
+
+
