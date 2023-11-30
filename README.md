@@ -53,9 +53,10 @@ Neste espaço, você encontra o material apresentado e desenvolvido durante a di
 * [R Graphics Cookbook](https://r-graphics.org/)
 * [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
 * [Modern Data Visualization with R](https://rkabacoff.github.io/datavis/)
-
+  
 ## Comunidade R-Ladies
 * <b>Site</b>: https://rladies.org/
 * <b>Youtube</b>: https://www.youtube.com/@RLadiesGlobal
 
-
+## agRonomy - Ag Data Analytics in R - organização, modelagem e visualização de dados agrícolas
+* <b>Site</b>: https://agronomy.netlify.app/
