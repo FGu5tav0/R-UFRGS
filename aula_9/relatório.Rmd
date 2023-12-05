@@ -1,0 +1,78 @@
+---
+title: "Relatório"
+author: "Gustavo Frosi"
+# date: "`r Sys.Date()`"
+date: '`r format(Sys.Date(), "%d de %B de %Y")`'
+output: pdf_document
+bibliography: references.bib
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = T, warning = T, eval = T)
+```
+
+# Título
+
+## Título
+
+### Título
+
+# Paragráfo
+
+Com barra reta
+
+# Negrito
+
+Texto para **negrito** ou **negrito**
+
+# Itálico
+
+Texto em *itálico* ou em *itálico*
+
+# Riscado
+
+Texto ~~riscado~~
+
+# Sub ou Sobbrescrito
+
+120 kg ha^-1^ de K~2~O
+
+# Linha
+
+---
+
+# Lista
+
+- Um
+- Dois
+- Três
+
+# Código
+
+```{r, echo=F, message=FALSE, warning=F}
+library(tidyverse)
+
+iris |> 
+  ggplot() +
+  aes(Sepal.Length, Petal.Length, col = Species) +
+  geom_point()
+
+soma <- sum(iris$Sepal.Length)
+
+```
+
+A soma do comprimento da sépala foi de `r soma`
+
+# Equações
+
+$-b \pm \sqrt{b^2 — 4ac} \over 2a$
+
+# Citação
+
+O cultivo sem adição de K esgota as reservas de K do solo e diminui as proporções de minerais 2:1 com hidroxi-al [@moterle2019]
+
+
+# Referências
+
