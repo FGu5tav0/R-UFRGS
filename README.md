@@ -58,5 +58,5 @@ Neste espaço, você encontra o material apresentado e desenvolvido durante a di
 * <b>Site</b>: https://rladies.org/
 * <b>Youtube</b>: https://www.youtube.com/@RLadiesGlobal
 
-## agRonomy - Ag Data Analytics in R - organização, modelagem e visualização de dados agrícolas
+## 🌱 agRonomy - Ag Data Analytics in R - organização, modelagem e visualização de dados agrícolas
 * <b>Site</b>: https://agronomy.netlify.app/
