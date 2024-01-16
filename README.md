@@ -3,6 +3,21 @@
 ## :memo: Descrição
 Neste espaço, você encontra o material apresentado e desenvolvido durante a disciplina, bem como materiais extras para estudo.
 
+## Cronograma
+
+| Aula  | Tema | 
+| ------------- | ------------- | 
+| 1  | Apresentação, Lógica de programação, Histórico e Instalação |
+| 2  | Sintaxe, operadores, objetos e classes |
+| 3  | Operações matemáticas, estruturas de repetição e de seleção e funções |
+| 4  | Importação, organização, filtro, seleção e transformação de variáveis |
+| 5  | Gráficos com {ggplot2} |
+| 6  | Estatística descritiva, ANOVA e testes de comparação de médias |
+| 7  | Testes não paramétricos |
+| 8  | Correlação e regressão |
+| 9  | PCA e CDA, mod. misto e relatórios|
+
+
 ## Apresentações 
 - [Apresentação Primeira Aula](https://gugaf.quarto.pub/aula-1/#/title-slide)
 - [Data Tidy](https://gugaf.quarto.pub/dados-arrumados---data-tidy/#/title-slide)
